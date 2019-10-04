@@ -10,7 +10,7 @@ ol{
 
 /* Section Specific Styles */
 
-#highScores{
+#scores{
   position:absolute;
   top:16px;
   left:40px;
@@ -87,6 +87,12 @@ button{
 #finish #records input, #finish #records button{
   margin-left:10px;
 }
+}
+
+#highScores{
+  margin:0 auto;
+  max-width:50%;
+  margin-top:200px;
 }
 
 
