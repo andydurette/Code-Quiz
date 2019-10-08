@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   //Set the question Initial data in questionHolder section
   let setQuestionData = () => {
-      document.querySelector('#quizHolder p').innerHTML = questions[0].title;
+      document.querySelector('#quizHolder p').innerHTML = questions[qCount].title;
       document.querySelector('#quizHolder ol li:nth-of-type(1)').innerHTML = `1. ${questions[qCount].choices[0]}`;
       document.querySelector('#quizHolder ol li:nth-of-type(2)').innerHTML = `2. ${questions[qCount].choices[1]}`;
       document.querySelector('#quizHolder ol li:nth-of-type(3)').innerHTML = `3. ${questions[qCount].choices[2]}`;
