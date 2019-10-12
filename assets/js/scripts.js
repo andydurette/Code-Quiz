@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
   (localStorage.getItem('recordsArray')) ? recordsArray = JSON.parse(localStorage.getItem('recordsArray')) : recordsArray = [];
 
 
-//////////////////// PRESET FUNCTIONS TO BE CALLED IN THE CODE CREATED AS THE CODE IS REPEATED HENCE FUNCTIONS ARE EFFICIENT ////////////////////
+//////////////////// FUNCTIONS TO BE CALLED IN THE CODE CREATED AS THE CODE IS REPEATED HENCE FUNCTIONS ARE EFFICIENT ////////////////////
 
-  // preset Function to reset HTML display for the score
+  // FUNCTION to reset HTML display for the score
   let recordsHtmlReset = () => {
       document.querySelector('#highScores div').innerHTML = "";
       var i = 1;
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
 
-  //Function to set the question data in questionHolder section
+  // FUNCTION to set the question data in questionHolder section
   let setQuestionData = () => {
       document.querySelector('#quizHolder p').innerHTML = questions[qCount].title;
       document.querySelector('#quizHolder ol li:nth-of-type(1)').innerHTML = `1. ${questions[qCount].choices[0]}`;
@@ -46,10 +46,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
 
-  //Set Initial data in questionHolder section
+  //call above function to set Initial data in questionHolder section
   setQuestionData();
 
-  //Changes the question with functionality of score changing
+  //FUNCTION changes the question and has a parameter to control the text which is provided weather it is correct or wrong
   let quizUpdate = (answerCopy) => {
     document.querySelector('#scoreIndicator p').innerHTML = answerCopy;
     document.querySelector('#scoreIndicator').classList.remove('invisible', scoreIndicator());
@@ -90,6 +90,9 @@ let myTimer = () => {
     }
 }
 
+
+//////////////////// QUIZ TIMER ////////////////////
+
 // On intro button click start time and starts giving questions
 let clock;
 document.querySelector("#intro button").addEventListener("click", (e) => {
@@ -107,9 +110,7 @@ let scoreIndicator = () => {
     }, 1000);
 }
 
-
-
-  //////////////////// QUIZ CONTROLS ////////////////////
+//////////////////// QUIZ CONTROLS ////////////////////
 
   // Create an array of selected divs so I can refer to them with the this keyword and replace their values to then check against the answer property for all questions.
   Array.from(answers).forEach(check => {
