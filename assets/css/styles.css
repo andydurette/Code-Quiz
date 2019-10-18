@@ -157,8 +157,12 @@ pointer-events:none;
   flex-direction:row;
 }
 
-section{
-  max-width:50%;
+#quizHolder{
+  min-width:420px;
+}
+
+#quizHolder ol{
+  min-width:100%;
 }
 
 }
