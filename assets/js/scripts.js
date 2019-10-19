@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 	// FUNCTION to more quickly call elements less typing means less chance for errors
 	let queryElement = (element) => {
-		return document.querySelector(element)
+		return document.querySelector(element);
 	}
 
 	// FUNCTION to hide all sections then unhide the one provided by the parameter
