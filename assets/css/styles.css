@@ -87,24 +87,22 @@ button{
   font-weight:700;
 }
 
-#quizHolder ol{
-  list-style-type:none;
-  padding:0;
-}
 
-#quizHolder ol li{
+#quizHolder button{
   background-color:#41275e;
   border-radius:5px;
   color:white;
   margin: 3px 0;
   padding: 5px 5px ;
   cursor:pointer;
+  display: block;
+  width: 100%;
+  text-align: left;
 }
 
-#quizHolder ol li:hover{
+#quizHolder button:hover{
   background-color: #613a8d;
 }
-
 
 #scoreIndicator, #errorIndicator{
   border-top: 1px solid #999;

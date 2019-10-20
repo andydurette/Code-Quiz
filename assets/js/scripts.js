@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	let score = 0;
 	let qCount = 0;
 	let timeset;
-	let answers = document.querySelectorAll('#quizHolder ol li');
+	let answers = document.querySelectorAll('#quizHolder button');
 
 	//2. Sets array then if local storage exists it populates it into the array of records.
 	let recordsArray = [];
@@ -52,10 +52,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	// FUNCTION to set the question data in questionHolder section
 	let setQuestionData = () => {
 		queryElement('#quizHolder p').innerHTML = questions[qCount].title;
-		queryElement('#quizHolder ol li:nth-of-type(1)').innerHTML = `1. ${questions[qCount].choices[0]}`;
-		queryElement('#quizHolder ol li:nth-of-type(2)').innerHTML = `2. ${questions[qCount].choices[1]}`;
-		queryElement('#quizHolder ol li:nth-of-type(3)').innerHTML = `3. ${questions[qCount].choices[2]}`;
-		queryElement('#quizHolder ol li:nth-of-type(4)').innerHTML = `4. ${questions[qCount].choices[3]}`;
+		queryElement('#quizHolder button:nth-of-type(1)').innerHTML = `1. ${questions[qCount].choices[0]}`;
+		queryElement('#quizHolder button:nth-of-type(2)').innerHTML = `2. ${questions[qCount].choices[1]}`;
+		queryElement('#quizHolder button:nth-of-type(3)').innerHTML = `3. ${questions[qCount].choices[2]}`;
+		queryElement('#quizHolder button:nth-of-type(4)').innerHTML = `4. ${questions[qCount].choices[3]}`;
 	}
 
 	//FUNCTION changes the question and has a parameter to control the text which is provided weather it is correct or wrong
